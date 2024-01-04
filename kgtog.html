@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: black;
+            color:white;
+        }
+        main {
+            position:fixed;
+            border:red solid;
+            border-radius: 20px;
+            top:0;
+            right:0;
+            left:0;
+            bottom:0;
+            text-align: center;
+            
+        }
+        .input {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            display: flex;
+        
+        }
+        #kgamount {
+            font-size: 50px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border:none;
+            box-shadow: 0px 0px 10px white;
+            border-radius: 10px;
+            background-color: black;
+            color:white;
+            padding-left:15px;
+            padding-top:10px;
+            padding-bottom: 10px;
+            flex:1;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        main button {
+            font-size: 30px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: black;
+            color:white;
+            box-shadow: 0px 0px 5px white;
+            border:none;
+            border-radius: 10px;
+            padding: 5px 20px 5px 20px;
+            margin-bottom:50px;
+        }
+        #secret {
+            font-size: 30px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: black;
+            color:white;
+            border:none;
+            border-radius: 5px;
+            padding: 5px 20px 5px 20px;
+            margin-bottom:50px;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+       
+        function convert() {
+            amount = document.getElementById("kgamount").value;
+            answer = amount*1000;
+            document.getElementById("secret").innerText = amount+' kilograms = '+answer + ' grams';
+        }
+    </script>
+    <main>
+        <div class="input">
+            <input id="kgamount" placeholder="Enter amount in kg">
+        </div>
+        <div class="submit">
+            <button onclick="convert()">submit</button>
+        </div>
+        <div class="answer">
+            <p id="secret"></p>
+        </div>
+        <div>
+            <button onclick="window.location.replace('PP1.html')">Return to Home</button>
+        </div>
+    </main>
+    
+</body>
+</html>
